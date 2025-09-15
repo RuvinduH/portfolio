@@ -1,3 +1,4 @@
+import { color } from "framer-motion";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -12,6 +13,7 @@ const config: Config = {
       sm: "375px",
       md: "768px",
       lg: "1200px",
+      xl: "1920px",
     },
     container: {
       center: true,
@@ -20,7 +22,15 @@ const config: Config = {
         md: "2rem",
       },
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: "var(--font-sans)",
+        serif: "var(--font-serif)",
+      },
+      colors: {
+        'my-emerald': '#78d59c',
+      },
+    },
   },
   plugins: [],
 };

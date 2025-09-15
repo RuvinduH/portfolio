@@ -4,7 +4,6 @@ import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
 import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
 import SectionHeader from "@/components/SectionHeader";
 import Image from "next/image";
-import grainImage from "@/assets/images/grain.jpg";
 import Card from "@/components/Card";
 
 const testimonials = [
@@ -51,7 +50,7 @@ export const TestimonialsSection = () => {
                 className="max-w-xs md:max-w-md md:p-8"
               >
                 <div className="flex gap-4 items-center">
-                  <div className="relative size-16 md:size-20 lg:size-24 shrink-0 overflow-hidden rounded-full bg-gray-700">
+                  <div className="relative size-20 lg:size-24 shrink-0 overflow-hidden rounded-full bg-gray-700">
                     <Image
                       src={testimonial.avatar}
                       alt={testimonial.name}

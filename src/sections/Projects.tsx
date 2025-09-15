@@ -3,9 +3,8 @@ import reytsAdminDashboardProject from "@/assets/images/reyts-admin-dashboard-pr
 import minecraftVillageProject from "@/assets/images/mc-project.png";
 import minecraftEncryptionProjecct from "@/assets/images/mc-encryption-project.png";
 import Image from "next/image";
-import CheckCirleIcon from "@/assets/icons/check-circle.svg";
+import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
-import grainImage from "@/assets/images/grain.jpg";
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
 
@@ -161,7 +160,7 @@ export const ProjectsSection = () => {
                         key={result.title}
                         className="flex items-start gap-3 text-sm md:text-base leading-relaxed text-white/70"
                       >
-                        <CheckCirleIcon
+                        <CheckCircleIcon
                           className="
                         h-5 w-5
                         md:h-6 md:w-6

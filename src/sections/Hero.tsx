@@ -88,16 +88,22 @@ export const HeroSection = () => {
       </div>
       <div className="container">
         <div className="flex flex-col items-center">
-          <div>"Hey, I'm Ruvindu Hewage"</div>
+          <p className="text-center lg:text-lg">
+            “Hey, I’m{" "}
+            <span className="uppercase font-semibold bg-gradient-to-r from-my-emerald to-my-sky bg-clip-text text-transparent">
+              Ruvindu Hewage
+            </span>
+            ”
+          </p>
           <Image
             src={memojiImage}
-            className="size-[100px] xl:size-[120px]"
+            className="size-[100px] lg:size-[120px]"
             alt="Person peeking from behind the laptop"
           />
-          <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
+          <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-3 rounded-lg">
             <div className="bg-green-500 size-2.5 rounded-full"></div>
             <div className="text-sm font-medium">
-              Available for new projects
+              Ready for new adventures 🚀
             </div>
           </div>
         </div>

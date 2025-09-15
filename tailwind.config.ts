@@ -29,6 +29,7 @@ const config: Config = {
       },
       colors: {
         'my-emerald': '#78d59c',
+        'my-sky': '#68e8f8',
       },
     },
   },

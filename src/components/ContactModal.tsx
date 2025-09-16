@@ -14,9 +14,8 @@ export default function ContactModal({
   onClose: () => void;
 }) {
   const emailRef = useRef<HTMLInputElement>(null);
-  const [state, handleSubmit] = useForm("xrbawgrz"); // <-- your Formspree ID
+  const [state, handleSubmit] = useForm("xrbawgrz");
 
-  // Focus + lock scroll
   useEffect(() => {
     if (open) {
       emailRef.current?.focus();
@@ -28,7 +27,6 @@ export default function ContactModal({
     }
   }, [open]);
 
-  // ESC to close
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
@@ -47,13 +45,11 @@ export default function ContactModal({
           aria-modal="true"
           role="dialog"
         >
-          {/* Backdrop */}
           <div
             className="absolute inset-0 bg-black/60"
             onClick={onClose}
             aria-hidden
           />
-          {/* Dialog */}
           <motion.div
             className="relative z-[101] w-full max-w-lg rounded-2xl border border-white/10 bg-gray-900 p-6 text-white shadow-xl"
             initial={{ y: 16, opacity: 0.95 }}

@@ -6,6 +6,7 @@ import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
 import HeroOrbit from "@/components/HeroOrbit";
 import ScrollButton from "@/components/ScrollButton";
+import ContactLauncher from "@/components/ContactLauncher";
 
 export const HeroSection = () => {
   return (
@@ -225,10 +226,10 @@ export const HeroSection = () => {
             <span className="font-semibold">Explore My Work</span>
             <ArrowDown className="size-4" />
           </ScrollButton>
-          <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl ">
+          <ContactLauncher className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl ">
             <span>👋</span>
             <span className="font-semibold">Let's Connect</span>
-          </button>
+          </ContactLauncher>
         </div>
       </div>
     </div>

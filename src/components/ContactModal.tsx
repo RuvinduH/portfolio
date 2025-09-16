@@ -78,7 +78,10 @@ export default function ContactModal({
                   Thanks — I’ll get back to you soon.
                 </p>
                 <div className="flex flex-wrap items-center gap-3">
-                  <Link href="mailto:you@yourdomain.com" className="underline">
+                  <Link
+                    href="mailto:ruvinduhwg@gmail.com?subject=Contact%20via%20portfolio&body=Hi%20Ruvindu%2C%0D%0A%0D%0A—I saw your portfolio and…"
+                    className="underline"
+                  >
                     Email me directly
                   </Link>
                   <span className="text-white/40">•</span>

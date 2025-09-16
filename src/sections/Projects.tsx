@@ -16,15 +16,11 @@ const portfolioProjects = [
     description: [
       {
         title:
-          "Developed a full-stack application for browsing, comparing, and purchasing groceries",
+          "Full-stack grocery app: browse, compare, buy — React + Spring Boot (BFF, REST)",
       },
       {
         title:
-          "Built React frontend integrated with Spring Boot microservices using Backend-for-Frontend (BFF) and REST APIs",
-      },
-      {
-        title:
-          "Enforced JWT and Spring Security for authentication; deployed using Docker on AWS Elastic Beanstalk and ECR",
+          "Secured & deployed: JWT/Spring Security; Docker → AWS (ECR, Elastic Beanstalk)",
       },
     ],
     tech: [
@@ -50,15 +46,11 @@ const portfolioProjects = [
     description: [
       {
         title:
-          "Led the development of a real-time financial dashboard with a responsive and brand-aligned UI",
+          "Real-time dashboard: responsive, on-brand UI with modern layouts, advanced filters, and dynamic summary widgets",
       },
       {
         title:
-          "Implemented modern layouts and features, while adding advanced filters and dynamic financial summary widgets, integrating backend APIs to fetch real-time transaction data",
-      },
-      {
-        title:
-          "Ensured robust testing and smooth deployment without disrupting ongoing operations",
+          "Live data & delivery: backend API integration for real-time transactions; robust tests and zero-downtime deploys",
       },
     ],
     tech: ["Vue.js", "REST APIs", "CSS", "Git", "Agile Scrum"],
@@ -72,15 +64,11 @@ const portfolioProjects = [
     description: [
       {
         title:
-          "Built a Python program that generates unique Minecraft villages (houses, farms, roads, lamps) that completely adapts to any environment or map",
+          "Python procedural generator for Minecraft villages (houses, farms, roads, lamps) that adapts to any terrain/map",
       },
       {
         title:
-          "Applied a Gaussian blur terrain smoothing and A* pathfinding for realistic road/bridge layouts",
-      },
-      {
-        title:
-          "Accelerated through multi-threading to significantly improve runtime performance",
+          "Realistic layouts & speed: Gaussian-blur terrain smoothing + A* pathfinding; multithreaded for faster runtime",
       },
     ],
     tech: [
@@ -101,15 +89,11 @@ const portfolioProjects = [
     description: [
       {
         title:
-          "Built a secure Encrypt-then-MAC communication protocol resistant to CCA attacks in Minecraft",
+          "CCA-resistant Encrypt-then-MAC protocol for Minecraft; integrated with Python MCPI client and Java server plugin",
       },
       {
         title:
-          "Used RSA (2048-bit, OAEP) with HMAC-SHA256 to ensure message integrity",
-      },
-      {
-        title:
-          "Integrated into Python MCPI client and Java server plugin to handle encrypted payloads",
+          "Crypto stack: RSA-2048 (OAEP) for encryption + HMAC-SHA256 for integrity; handles encrypted payloads end-to-end",
       },
     ],
     tech: [
@@ -141,10 +125,10 @@ export const ProjectsSection = () => {
           {portfolioProjects.map((project) => (
             <Card
               key={project.title}
-              className="p-5 md:py-12 md:px-10 lg:py-14 lg:px-14"
+              className="p-5 h-[560px] md:h-[775px] lg:h-[570px] xl:h-[710px] md:py-12 md:px-10 lg:py-14 lg:px-10 sticky top-16 md:top-24 lg:top-32 xl:top-36"
             >
-              <div className="lg:grid lg:grid-cols-2 lg:gap-10">
-                <div>
+              <div className="lg:grid lg:grid-cols-3 lg:gap-8">
+                <div className="lg:col-span-1">
                   <div className="bg-gradient-to-r from-my-emerald to-my-sky inline-flex font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text gap-2">
                     <span>{project.company}</span>
                     <span>&bull;</span>
@@ -187,7 +171,7 @@ export const ProjectsSection = () => {
                     </a>
                   )}
                 </div>
-                <div className="flex flex-col justify-center">
+                <div className="flex flex-col justify-center lg:col-span-2">
                   <Image
                     src={project.image}
                     alt={project.title}

@@ -17,3 +17,7 @@
     @apply lg:max-w-6xl xl:max-w-[1800px];
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}

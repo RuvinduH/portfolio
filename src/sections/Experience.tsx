@@ -71,7 +71,7 @@ const experiences = [
 
 export const ExperienceSection = () => {
   return (
-    <section id="experience">
+    <section id="experiences" className="scroll-mt-16">
       <div className="container lg:max-w-6xl xl:max-w-7xl">
         <SectionHeader
           eyebrow="Real-World Results"

@@ -113,7 +113,10 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-16 lg:py-20">
+    <section
+      id="projects"
+      className="py-16 lg:py-20 -scroll-mt-7 lg:-scroll-mt-10"
+    >
       <div className="container">
         <SectionHeader
           eyebrow="Technical Showcase"

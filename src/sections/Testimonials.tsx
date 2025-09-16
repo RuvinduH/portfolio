@@ -36,7 +36,10 @@ const testimonials = [
 
 export const TestimonialsSection = () => {
   return (
-    <div className="py-16 lg:py-24">
+    <section
+      id="testimonials"
+      className="py-16 lg:py-24 -scroll-mt-6 lg:-scroll-mt-10"
+    >
       <div className="container">
         <SectionHeader
           eyebrow="Happy Teammates"
@@ -80,6 +83,6 @@ export const TestimonialsSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

@@ -156,7 +156,7 @@ export const AboutSection = () => {
                       <Image
                         src={certification.image}
                         alt={certification.title}
-                        className="size-24"
+                        className="size-24 xl:size-28"
                       />
                     </a>
                   </div>

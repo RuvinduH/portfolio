@@ -5,6 +5,7 @@ import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
 import HeroOrbit from "@/components/HeroOrbit";
+import ScrollButton from "@/components/ScrollButton";
 
 export const HeroSection = () => {
   return (
@@ -217,10 +218,13 @@ export const HeroSection = () => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-7 md:mt-11 gap-4">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+          <ScrollButton
+            className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl"
+            scrollToId="experience"
+          >
             <span className="font-semibold">Explore My Work</span>
             <ArrowDown className="size-4" />
-          </button>
+          </ScrollButton>
           <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl ">
             <span>👋</span>
             <span className="font-semibold">Let's Connect</span>

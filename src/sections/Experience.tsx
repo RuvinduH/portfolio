@@ -71,7 +71,7 @@ const experiences = [
 
 export const ExperienceSection = () => {
   return (
-    <div>
+    <section id="experience">
       <div className="container lg:max-w-6xl xl:max-w-7xl">
         <SectionHeader
           eyebrow="Real-World Results"
@@ -134,6 +134,6 @@ export const ExperienceSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

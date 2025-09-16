@@ -17,7 +17,7 @@ import SpringBootIcon from "@/assets/icons/spring-boot.svg";
 import NodeJSIcon from "@/assets/icons/nodejs.svg";
 import MavenIcon from "@/assets/icons/maven.svg";
 import PostgreSQLIcon from "@/assets/icons/postgresql.svg";
-import MySQLIcon from "@/assets/icons/MySQL.svg";
+import MySQLIcon from "@/assets/icons/mysql.svg";
 import DockerIcon from "@/assets/icons/docker.svg";
 import AWSIcon from "@/assets/icons/aws.svg";
 import GithubIcon from "@/assets/icons/github.svg";

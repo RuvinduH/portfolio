@@ -9,7 +9,7 @@ import HeroOrbit from "@/components/HeroOrbit";
 export const HeroSection = () => {
   return (
     <div className="py-[104px] md:py-[168px] lg:py-[216px] xl:py-[356px] relative z-0 overflow-x-clip">
-      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)] xl:[mask-image:linear-gradient(to_bottom,transparent,black_10%,black_80%,transparent)]">
+      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)] xl:[mask-image:linear-gradient(to_bottom,transparent,black_10%,black_80%,transparent)] -z-10">
         <div
           className="absolute inset-0 -z-30 opacity-5"
           style={{ backgroundImage: `url(${grainImage.src})` }}
@@ -25,68 +25,166 @@ export const HeroSection = () => {
         <div className="hero-ring size-[2280px]"></div>
         <div className="hero-ring size-[2480px]"></div>
         <div className="hero-ring size-[2680px]"></div>
-        <HeroOrbit size={1800} rotation={-69}>
+        <HeroOrbit
+          size={1800}
+          rotation={-69}
+          shouldOrbit
+          orbitDuration="68s"
+          shouldSpin
+          spinDuration="10s"
+        >
           <StarIcon className="size-44 text-my-emerald" />
         </HeroOrbit>
-        <HeroOrbit size={1450} rotation={-10}>
+        <HeroOrbit
+          size={1450}
+          rotation={-10}
+          shouldOrbit
+          orbitDuration="66s"
+          shouldSpin
+          spinDuration="10s"
+        >
           <StarIcon className="size-40 text-my-emerald" />
         </HeroOrbit>
-        <HeroOrbit size={1400} rotation={110}>
+        <HeroOrbit
+          size={1400}
+          rotation={110}
+          shouldOrbit
+          orbitDuration="64s"
+          shouldSpin
+          spinDuration="10s"
+        >
           <StarIcon className="size-36 text-my-emerald" />
         </HeroOrbit>
-        <HeroOrbit size={1000} rotation={180}>
+        <HeroOrbit
+          size={1400}
+          rotation={-60}
+          shouldOrbit
+          orbitDuration="62s"
+          shouldSpin
+          spinDuration="3s"
+        >
+          <SparkleIcon className="size-16 text-my-emerald/20" />
+        </HeroOrbit>
+        <HeroOrbit
+          size={1300}
+          rotation={160}
+          shouldOrbit
+          orbitDuration="60s"
+          shouldSpin
+          spinDuration="3s"
+        >
+          <SparkleIcon className="size-16 text-my-emerald/20" />
+        </HeroOrbit>
+        <HeroOrbit size={1250} rotation={130} shouldOrbit orbitDuration="58s">
+          <div className="size-3 rounded-full bg-my-emerald/20" />
+        </HeroOrbit>
+        <HeroOrbit
+          size={1200}
+          rotation={-30}
+          shouldOrbit
+          orbitDuration="56s"
+          shouldSpin
+          spinDuration="3s"
+        >
+          <SparkleIcon className="size-14 text-my-emerald/20" />
+        </HeroOrbit>
+        <HeroOrbit size={1150} rotation={-70} shouldOrbit orbitDuration="54s">
+          <div className="size-3 rounded-full bg-my-emerald/20" />
+        </HeroOrbit>
+        <HeroOrbit
+          size={1000}
+          rotation={180}
+          shouldOrbit
+          orbitDuration="52s"
+          shouldSpin
+          spinDuration="10s"
+        >
           <StarIcon className="size-32 text-my-emerald" />
         </HeroOrbit>
-        <HeroOrbit size={807} rotation={-73.3}>
+        <HeroOrbit size={1000} rotation={150} shouldOrbit orbitDuration="50s">
+          <div className="size-3 rounded-full bg-my-emerald/20" />
+        </HeroOrbit>
+        <HeroOrbit
+          size={807}
+          rotation={-73.3}
+          shouldOrbit
+          orbitDuration="48s"
+          shouldSpin
+          spinDuration="10s"
+        >
           <StarIcon className="size-28 text-my-emerald" />
         </HeroOrbit>
-        <HeroOrbit size={536} rotation={19.2}>
-          <StarIcon className="size-12 text-my-emerald" />
+        <HeroOrbit
+          size={712}
+          rotation={145.5}
+          shouldOrbit
+          orbitDuration="46s"
+          shouldSpin
+          spinDuration="3s"
+        >
+          <SparkleIcon className="size-14 text-my-emerald/20" />
         </HeroOrbit>
-        <HeroOrbit size={580} rotation={99.5}>
+        <HeroOrbit size={708} rotation={86} shouldOrbit orbitDuration="44s">
+          <div className="size-3 rounded-full bg-my-emerald/20" />
+        </HeroOrbit>
+        <HeroOrbit size={640} rotation={-6} shouldOrbit orbitDuration="42s">
+          <div className="size-2 rounded-full bg-my-emerald/20" />
+        </HeroOrbit>
+        <HeroOrbit
+          size={580}
+          rotation={99.5}
+          shouldOrbit
+          orbitDuration="40s"
+          shouldSpin
+          spinDuration="10s"
+        >
           <StarIcon className="size-8 text-my-emerald" />
         </HeroOrbit>
-        <HeroOrbit size={423} rotation={-16.3}>
-          <SparkleIcon className="size-8 text-my-emerald/20" />
-        </HeroOrbit>
-        <HeroOrbit size={430} rotation={80}>
-          <SparkleIcon className="size-5 text-my-emerald/20" />
-        </HeroOrbit>
-        <HeroOrbit size={539} rotation={179.4}>
+        <HeroOrbit
+          size={539}
+          rotation={179.4}
+          shouldOrbit
+          orbitDuration="38s"
+          shouldSpin
+          spinDuration="3s"
+        >
           <SparkleIcon className="size-10 text-my-emerald/20" />
         </HeroOrbit>
-        <HeroOrbit size={712} rotation={145.5}>
-          <SparkleIcon className="size-14 text-my-emerald/20" />
+        <HeroOrbit
+          size={536}
+          rotation={19.2}
+          shouldOrbit
+          orbitDuration="36s"
+          shouldSpin
+          spinDuration="10s"
+        >
+          <StarIcon className="size-12 text-my-emerald" />
         </HeroOrbit>
-        <HeroOrbit size={1200} rotation={-30}>
-          <SparkleIcon className="size-14 text-my-emerald/20" />
-        </HeroOrbit>
-        <HeroOrbit size={1300} rotation={160}>
-          <SparkleIcon className="size-16 text-my-emerald/20" />
-        </HeroOrbit>
-        <HeroOrbit size={1400} rotation={-60}>
-          <SparkleIcon className="size-16 text-my-emerald/20" />
-        </HeroOrbit>
-        <HeroOrbit size={1000} rotation={150}>
-          <div className="size-3 rounded-full bg-my-emerald/20" />
-        </HeroOrbit>
-        <HeroOrbit size={1150} rotation={-70}>
-          <div className="size-3 rounded-full bg-my-emerald/20" />
-        </HeroOrbit>
-        <HeroOrbit size={1250} rotation={130}>
-          <div className="size-3 rounded-full bg-my-emerald/20" />
-        </HeroOrbit>
-        <HeroOrbit size={708} rotation={86}>
-          <div className="size-3 rounded-full bg-my-emerald/20" />
-        </HeroOrbit>
-        <HeroOrbit size={520} rotation={-43}>
+        <HeroOrbit size={520} rotation={-43} shouldOrbit orbitDuration="34s">
           <div className="size-2 rounded-full bg-my-emerald/20" />
         </HeroOrbit>
-        <HeroOrbit size={640} rotation={-6}>
-          <div className="size-2 rounded-full bg-my-emerald/20" />
+        <HeroOrbit
+          size={430}
+          rotation={80}
+          shouldOrbit
+          orbitDuration="32s"
+          shouldSpin
+          spinDuration="3s"
+        >
+          <SparkleIcon className="size-5 text-my-emerald/20" />
+        </HeroOrbit>
+        <HeroOrbit
+          size={423}
+          rotation={-16.3}
+          shouldOrbit
+          orbitDuration="30s"
+          shouldSpin
+          spinDuration="3s"
+        >
+          <SparkleIcon className="size-8 text-my-emerald/20" />
         </HeroOrbit>
       </div>
-      <div className="container">
+      <div className="container z-30">
         <div className="flex flex-col items-center">
           <p className="text-center lg:text-lg">
             “Hey, I’m{" "}
@@ -101,7 +199,9 @@ export const HeroSection = () => {
             alt="Person peeking from behind the laptop"
           />
           <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-3 rounded-lg">
-            <div className="bg-green-500 size-2.5 rounded-full"></div>
+            <div className="bg-green-500 size-2.5 rounded-full relative">
+              <div className="bg-green-500 absolute inset-0 rounded-full animate-ping-large"></div>
+            </div>
             <div className="text-sm font-medium">
               Ready for new adventures 🚀
             </div>

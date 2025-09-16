@@ -14,12 +14,12 @@ export const Header = () => {
         <a href="#projects" className="nav-item">
           Projects
         </a>
-        <a href="#about" className="nav-item hidden md:block">
+        <a href="#about" className="nav-item">
           About
         </a>
         <a
           href="#contact"
-          className="nav-item bg-white text-gray-900 hover:bg-white/70 hover:text-gray-900"
+          className="nav-item bg-white text-gray-900 hover:bg-white/70 hover:text-gray-900 hidden md:block"
         >
           Contact
         </a>

@@ -47,7 +47,7 @@ export const TestimonialsSection = () => {
             {testimonials.map((testimonial) => (
               <Card
                 key={testimonial.name}
-                className="max-w-xs md:max-w-md md:p-8"
+                className="p-5 max-w-xs md:max-w-md md:p-8"
               >
                 <div className="flex gap-4 items-center">
                   <div className="relative size-20 lg:size-24 shrink-0 overflow-hidden rounded-full bg-gray-700">
@@ -67,7 +67,7 @@ export const TestimonialsSection = () => {
                     </div>
                   </div>
                 </div>
-                <p className="mt-4 md:mt-6 text-sm md:text-base text-center">
+                <p className="mt-4 md:mt-6 text-sm md:text-base">
                   {testimonial.text}
                 </p>
               </Card>

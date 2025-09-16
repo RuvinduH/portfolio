@@ -83,7 +83,7 @@ export const ExperienceSection = () => {
             {experiences.map((experience) => (
               <Card
                 key={experience.company}
-                className="md:py-12 md:px-10 lg:py-14 lg:px-14"
+                className="p-5 md:py-12 md:px-10 lg:py-14 lg:px-14"
               >
                 <p
                   className="bg-gradient-to-r from-my-emerald to-my-sky font-bold tracking-widest text-sm
@@ -99,13 +99,13 @@ export const ExperienceSection = () => {
                   {experience.company}
                 </p>
                 <div className="inline-flex gap-1 mt-1">
-                  <span className="bg-gradient-to-r from-my-emerald to-my-sky text-sm font-semibold text-gray-950 inline-flex items-center gap-1 rounded-xl px-1 ">
+                  <span className="bg-gradient-to-r from-my-emerald to-my-sky text-sm font-semibold text-gray-950 inline-flex items-center rounded-xl px-1.5 ">
                     {experience.location}
                   </span>
-                  <span className="bg-gradient-to-r from-my-emerald to-my-sky text-sm font-semibold text-gray-950 inline-flex items-center gap-1 rounded-xl px-1 ">
+                  <span className="bg-gradient-to-r from-my-emerald to-my-sky text-sm font-semibold text-gray-950 inline-flex items-center rounded-xl px-1.5 ">
                     {experience.contract}
                   </span>
-                  <span className="bg-gradient-to-r from-my-emerald to-my-sky text-sm font-semibold text-gray-950 inline-flex items-center rounded-xl px-1">
+                  <span className="bg-gradient-to-r from-my-emerald to-my-sky text-sm font-semibold text-gray-950 inline-flex items-center rounded-xl px-1.5">
                     {experience.mode}
                   </span>
                 </div>

@@ -83,7 +83,7 @@ export const ExperienceSection = () => {
             {experiences.map((experience) => (
               <Card
                 key={experience.company}
-                className="p-5 md:py-12 md:px-10 lg:py-14 lg:px-14"
+                className="p-5 md:py-12 md:px-10 lg:py-14 lg:px-14 sticky top-20 md:top-32 md:h-[435px] lg:h-[525px]"
               >
                 <p
                   className="bg-gradient-to-r from-my-emerald to-my-sky font-bold tracking-widest text-sm

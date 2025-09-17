@@ -72,65 +72,67 @@ const experiences = [
 export const ExperienceSection = () => {
   return (
     <section id="experiences" className="scroll-mt-16">
-      <div className="container lg:max-w-6xl xl:max-w-7xl">
-        <SectionHeader
-          eyebrow="Real-World Results"
-          title="My Professional Experiences"
-          description="Highlights from my professional journey—where I contributed to modernising enterprise systems, building secure applications, and delivering measurable impact."
-        />
-        <div className="mt-10 md:mt-20 lg:grid lg:grid-cols-2 lg:gap-10">
-          <div className="flex flex-col gap-10 lg:contents">
-            {experiences.map((experience) => (
-              <Card
-                key={experience.company}
-                className="p-5 md:py-12 md:px-10 lg:py-14 lg:px-14 sticky top-20 md:top-32 md:h-[435px] lg:h-[525px]"
-              >
-                <p
-                  className="bg-gradient-to-r from-my-emerald to-my-sky font-bold tracking-widest text-sm
-               bg-clip-text text-transparent whitespace-nowrap uppercase"
+      <div className="container mt-10 lg:max-w-6xl xl:max-w-7xl">
+        <div className="py-20 lg:py-28">
+          <SectionHeader
+            eyebrow="Real-World Results"
+            title="My Professional Experiences"
+            description="Highlights from my professional journey—where I contributed to modernising enterprise systems, building secure applications, and delivering measurable impact."
+          />
+          <div className="mt-10 md:mt-20 lg:grid lg:grid-cols-2 lg:gap-10">
+            <div className="flex flex-col gap-10 lg:contents">
+              {experiences.map((experience) => (
+                <Card
+                  key={experience.company}
+                  className="p-5 md:py-12 md:px-10 lg:py-14 lg:px-14 sticky top-20 md:top-32 md:h-[435px] lg:h-[525px]"
                 >
-                  {experience.year}
-                </p>
+                  <p
+                    className="bg-gradient-to-r from-my-emerald to-my-sky font-bold tracking-widest text-sm
+               bg-clip-text text-transparent whitespace-nowrap uppercase"
+                  >
+                    {experience.year}
+                  </p>
 
-                <h3 className="font-serif text-2xl mt-2 md:mt-5 md:text-4xl">
-                  {experience.position}
-                </h3>
-                <p className="text-sm font-semibold md:text-base text-white/40">
-                  {experience.company}
-                </p>
-                <div className="inline-flex gap-1 mt-1">
-                  <span className="bg-gradient-to-r from-my-emerald to-my-sky text-sm font-semibold text-gray-950 inline-flex items-center rounded-xl px-1.5 ">
-                    {experience.location}
-                  </span>
-                  <span className="bg-gradient-to-r from-my-emerald to-my-sky text-sm font-semibold text-gray-950 inline-flex items-center rounded-xl px-1.5 ">
-                    {experience.contract}
-                  </span>
-                  <span className="bg-gradient-to-r from-my-emerald to-my-sky text-sm font-semibold text-gray-950 inline-flex items-center rounded-xl px-1.5">
-                    {experience.mode}
-                  </span>
-                </div>
-                <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
-                <ul className="mt-4 md:mt-5 space-y-3">
-                  {experience.achievement.map((result) => (
-                    <li
-                      key={result.title}
-                      className="flex items-start gap-3 text-sm md:text-base leading-relaxed text-white/70"
-                    >
-                      <CheckCircleIcon
-                        className="
+                  <h3 className="font-serif text-2xl mt-2 md:mt-5 md:text-4xl">
+                    {experience.position}
+                  </h3>
+                  <p className="text-sm font-semibold md:text-base text-white/40">
+                    {experience.company}
+                  </p>
+                  <div className="inline-flex gap-1 mt-1">
+                    <span className="bg-gradient-to-r from-my-emerald to-my-sky text-sm font-semibold text-gray-950 inline-flex items-center rounded-xl px-1.5 ">
+                      {experience.location}
+                    </span>
+                    <span className="bg-gradient-to-r from-my-emerald to-my-sky text-sm font-semibold text-gray-950 inline-flex items-center rounded-xl px-1.5 ">
+                      {experience.contract}
+                    </span>
+                    <span className="bg-gradient-to-r from-my-emerald to-my-sky text-sm font-semibold text-gray-950 inline-flex items-center rounded-xl px-1.5">
+                      {experience.mode}
+                    </span>
+                  </div>
+                  <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
+                  <ul className="mt-4 md:mt-5 space-y-3">
+                    {experience.achievement.map((result) => (
+                      <li
+                        key={result.title}
+                        className="flex items-start gap-3 text-sm md:text-base leading-relaxed text-white/70"
+                      >
+                        <CheckCircleIcon
+                          className="
                         h-5 w-5
                         md:h-6 md:w-6
                         shrink-0
                         text-my-emerald
                         mt-0.5
                       "
-                      />
-                      <span className="block">{result.title}</span>
-                    </li>
-                  ))}
-                </ul>
-              </Card>
-            ))}
+                        />
+                        <span className="block">{result.title}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </div>

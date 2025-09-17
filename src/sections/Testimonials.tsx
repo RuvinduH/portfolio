@@ -139,22 +139,20 @@ export const TestimonialsSection = () => {
             className="pointer-events-none absolute inset-0 z-20"
             aria-hidden
           >
-            {/* LEFT edge => steer RIGHT (negative velocity) */}
+            {/* LEFT edge => steer RIGHT */}
             <div
-              className="absolute inset-y-0 left-0 w-[15%] pointer-events-auto"
+              className="absolute inset-y-0 left-0 pointer-events-auto w-[22%] md:w-[18%] xl:w-[15%]"
               onMouseEnter={() => setPaused(false)}
               onMouseMove={steerRight}
               onMouseLeave={resetDrift}
-              // Optional visual debug:
-              // style={{ outline: "1px dashed rgba(255,255,255,.1)" }}
             />
-            {/* RIGHT edge => steer LEFT (positive velocity) */}
+
+            {/* RIGHT edge => steer LEFT */}
             <div
-              className="absolute inset-y-0 right-0 w-[15%] pointer-events-auto"
+              className="absolute inset-y-0 right-0 pointer-events-auto w-[22%] md:w-[18%] xl:w-[15%]"
               onMouseEnter={() => setPaused(false)}
               onMouseMove={steerLeft}
               onMouseLeave={resetDrift}
-              // style={{ outline: "1px dashed rgba(255,255,255,.1)" }}
             />
           </div>
 

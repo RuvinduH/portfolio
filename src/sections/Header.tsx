@@ -5,6 +5,9 @@ export const Header = () => {
         <a href="#" className="nav-item">
           Home
         </a>
+        <a href="#skills" className="nav-item hidden md:block">
+          Qualifications
+        </a>
         <a href="#experiences" className="nav-item">
           Experience
         </a>

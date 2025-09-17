@@ -221,7 +221,7 @@ export const HeroSection = () => {
         <div className="flex flex-col md:flex-row justify-center items-center mt-7 md:mt-11 gap-4">
           <ScrollButton
             className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl"
-            scrollToId="experiences"
+            scrollToId="skills"
           >
             <span className="font-semibold">Explore My Work</span>
             <ArrowDown className="size-4" />

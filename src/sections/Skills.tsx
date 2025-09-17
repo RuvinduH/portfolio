@@ -65,7 +65,7 @@ const toolboxItems = [
 
 const SkillsSection = () => {
   return (
-    <section id="skills">
+    <section id="skills" className="scroll-mt-20 lg:scroll-mt-20 xl:scroll-mt-24">
       <div className="container xl:max-w-[1500px]">
         <SectionHeader
           eyebrow="Skills & Certifications"

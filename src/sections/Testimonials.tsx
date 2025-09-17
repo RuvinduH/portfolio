@@ -38,7 +38,7 @@ export const TestimonialsSection = () => {
   return (
     <section
       id="testimonials"
-      className="py-16 lg:py-24 -scroll-mt-6 lg:-scroll-mt-10"
+      className="py-16 lg:py-24 -scroll-mt-6 lg:-scroll-mt-10 xl:-scroll-mt-6"
     >
       <div className="container">
         <SectionHeader

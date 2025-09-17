@@ -115,7 +115,7 @@ export const ProjectsSection = () => {
   return (
     <section
       id="projects"
-      className="py-16 lg:py-20 -scroll-mt-7 lg:-scroll-mt-10"
+      className="py-16 lg:py-20 -scroll-mt-7 lg:-scroll-mt-6"
     >
       <div className="container">
         <SectionHeader

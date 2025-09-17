@@ -71,7 +71,7 @@ const experiences = [
 
 export const ExperienceSection = () => {
   return (
-    <section id="experiences" className="scroll-mt-16">
+    <section id="experiences" className="-scroll-mt-10 lg:-scroll-mt-14 xl:-scroll-mt-10">
       <div className="container mt-10 lg:max-w-6xl xl:max-w-7xl">
         <div className="py-20 lg:py-28">
           <SectionHeader

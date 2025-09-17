@@ -1,7 +1,7 @@
-import memojiAvatar1 from "@/assets/images/memoji-avatar-1.png";
-import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
-import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
-import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
+import memojiAvatar1 from "@/assets/images/memoji-avatar-7.png";
+import memojiAvatar2 from "@/assets/images/memoji-avatar-8.png";
+import memojiAvatar3 from "@/assets/images/memoji-avatar-9.png";
+import memojiAvatar4 from "@/assets/images/memoji-avatar-10.png";
 import SectionHeader from "@/components/SectionHeader";
 import Image from "next/image";
 import Card from "@/components/Card";
@@ -12,25 +12,25 @@ const testimonials = [
     name: "Jay Shah",
     position: "Technical Lead @ Westpac - Managed Ruvindu directly",
     text: "Ruvindu is a great guy to work with, he is always on time for his deliveries and works on the tasks assigned to him with the best of his abilities. He is leaving my team for the reasons out of my control but would have loved to keep him on for as long as possible.",
-    avatar: memojiAvatar1,
+    avatar: memojiAvatar4,
   },
   {
     name: "Rishabh Sharma",
     position: "Senior Developer @ Westpac - Worked with Ruvindu",
     text: "I worked with Ruvindu on upgrading various Java applications to improve security and undertake major framework upgrades. He is an excellent team player who consistently delivered high quality and efficient code. He always tries to find better ways of doing things by adopting new tools and technologies. I highly recommend Ruvindu for any software development role.",
-    avatar: memojiAvatar3,
+    avatar: memojiAvatar2,
   },
   {
     name: "Triet Lai",
     position: "Technical Lead @ Westpac - Worked with Ruvindu",
     text: "I have worked with Ruvindu for several months on Snyk project, during this time, he has quickly had a good grasp on the Compass Online Banking applications, demonstrating a strong ability to learn, adapt, and grow in a short period. His independent work style and solid knowledge in Maven, Java, JSP and JavaScript etc. has enabled him to address many security vulnerabilities successfully and efficiently.",
-    avatar: memojiAvatar4,
+    avatar: memojiAvatar3,
   },
   {
     name: "Sanket Kumar",
     position: "Backend Developer @ Westpac - Worked with Ruvindu",
     text: "I’ve had the pleasure of working with Ruvindu on the Compass application at Westpac, and it’s been a great experience. He’s not only a talented Java Developer with strong technical skills, but also a genuine team player who’s always ready to collaborate and support others. His positive attitude and commitment make a real difference, and I truly enjoy working alongside him.",
-    avatar: memojiAvatar5,
+    avatar: memojiAvatar1,
   },
 ];
 

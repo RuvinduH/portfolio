@@ -129,8 +129,8 @@ export const AboutSection = () => {
       <div className="container xl:max-w-[1500px]">
         <SectionHeader
           eyebrow="About Me"
-          title="A Glimpse Into My World"
-          description="Learn more about who I am, my qualifications and what inspires me"
+          title="A Little More About Me"
+          description="A quick snapshot of my background and my base of operations"
         />
 
         <div className="mt-12 flex flex-col gap-8">

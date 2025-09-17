@@ -28,59 +28,50 @@ export const Header = () => {
   const navRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    type Entry = { id: string; el: HTMLElement; top: number };
-    let entries: Entry[] = [];
     let raf = 0;
+    const mdMin = 768; // Tailwind md
 
-    const mdMin = 768; // Tailwind md breakpoint
+    const docTop = (el: HTMLElement) =>
+      el.getBoundingClientRect().top + window.scrollY;
+
+    const visibleLinks = () => {
+      const isMdUp = window.innerWidth >= mdMin;
+      return LINKS.filter((l) => (isMdUp ? true : !l.hideMd));
+    };
+
+    type Threshold = { id: string; top: number; el?: HTMLElement | null };
+
+    const buildThresholds = (): Threshold[] => {
+      const vis = visibleLinks();
+      const list: Threshold[] = vis.map((l) => {
+        if (l.id === "home" || l.href === "#") {
+          return { id: "home", top: 0, el: null };
+        }
+        const el = document.querySelector<HTMLElement>(l.href);
+        if (!el) return { id: l.id, top: Number.POSITIVE_INFINITY, el: null };
+        return { id: l.id, top: docTop(el), el };
+      });
+
+      // remove items whose target isn't in the DOM (except home)
+      const filtered = list.filter(
+        (t) => t.id === "home" || Number.isFinite(t.top)
+      );
+      filtered.sort((a, b) => a.top - b.top);
+      return filtered;
+    };
+
     const headerOffset = () => (navRef.current?.offsetHeight ?? 56) + 32;
 
-    const getVisibleIds = () => {
-      const isMdUp = window.innerWidth >= mdMin;
-      return LINKS.map((l) => l.id).filter((id, i) => {
-        const link = LINKS[i];
-        return isMdUp ? true : !link.hideMd; // on mobile, exclude hidden
-      });
-    };
-
-    const computeEntries = () => {
-      entries = LINKS.filter((l) => l.id !== "home") // "home" has no element
-        .map((l) => {
-          const el = document.querySelector<HTMLElement>(l.href);
-          if (!el) return null;
-          const top = el.getBoundingClientRect().top + window.scrollY;
-          return { id: l.id, el, top };
-        })
-        .filter(Boolean) as Entry[];
-      entries.sort((a, b) => a.top - b.top);
-    };
+    let thresholds = buildThresholds();
 
     const pickActive = (y: number) => {
-      const visibleIds = getVisibleIds();
-
-      // 1) Find the last section whose top <= y
-      let idx = -1;
-      for (let i = 0; i < entries.length; i++) {
-        if (y >= entries[i].top) idx = i;
+      // last visible threshold whose top <= y
+      let current = thresholds[0]?.id ?? "home";
+      for (let i = 0; i < thresholds.length; i++) {
+        if (y >= thresholds[i].top) current = thresholds[i].id;
         else break;
       }
-
-      // 2) If none -> "home"
-      if (idx < 0) return "home";
-
-      // 3) If that section is hidden on this viewport, walk backward
-      let chosen = entries[idx].id;
-      if (!visibleIds.includes(chosen)) {
-        for (let j = idx - 1; j >= 0; j--) {
-          if (visibleIds.includes(entries[j].id)) {
-            chosen = entries[j].id;
-            break;
-          }
-        }
-        // If still not found, fall back to "home"
-        if (!visibleIds.includes(chosen)) return "home";
-      }
-      return chosen;
+      return current;
     };
 
     const updateActive = () => {
@@ -89,41 +80,36 @@ export const Header = () => {
         const y = window.scrollY + headerOffset();
         let current = pickActive(y);
 
-        // If at very bottom, choose the last VISIBLE link (not "contact" on mobile)
+        // bottom of page -> last VISIBLE nav item for this viewport
         const docHeight = document.documentElement.scrollHeight;
         if (y + window.innerHeight >= docHeight - 1) {
-          const visibleIds = getVisibleIds();
-          current = visibleIds[visibleIds.length - 1] || "home";
+          current = thresholds[thresholds.length - 1]?.id ?? current;
         }
-
         setActive(current);
       });
     };
 
-    const handleResize = () => {
-      computeEntries();
+    const recompute = () => {
+      thresholds = buildThresholds();
       updateActive();
     };
 
-    // Recompute when sections resize (images/fonts load)
-    const ro = new ResizeObserver(() => {
-      computeEntries();
-      updateActive();
+    // Observe only real sections (skip home/#)
+    const ro = new ResizeObserver(recompute);
+    thresholds.forEach((t) => {
+      if (t.el) ro.observe(t.el);
     });
 
-    // Init
-    computeEntries();
-    entries.forEach((e) => ro.observe(e.el));
-    updateActive();
-
+    // init + listeners
+    recompute();
     window.addEventListener("scroll", updateActive, { passive: true });
-    window.addEventListener("resize", handleResize);
-    window.addEventListener("load", handleResize);
+    window.addEventListener("resize", recompute);
+    window.addEventListener("load", recompute);
 
     return () => {
       window.removeEventListener("scroll", updateActive);
-      window.removeEventListener("resize", handleResize);
-      window.removeEventListener("load", handleResize);
+      window.removeEventListener("resize", recompute);
+      window.removeEventListener("load", recompute);
       ro.disconnect();
       cancelAnimationFrame(raf);
     };
@@ -146,7 +132,6 @@ export const Header = () => {
               } ${isActive ? "text-gray-900" : ""}`}
               aria-current={isActive ? "page" : undefined}
             >
-              {/* animated pill */}
               <AnimatePresence>
                 {isActive && (
                   <motion.span
@@ -156,8 +141,6 @@ export const Header = () => {
                   />
                 )}
               </AnimatePresence>
-
-              {/* label sits above the pill */}
               <span className="relative z-10 font-semibold">{label}</span>
             </a>
           );

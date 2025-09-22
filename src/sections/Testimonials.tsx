@@ -25,7 +25,7 @@ const testimonials = [
   {
     name: "Triet Lai",
     position: "Technical Lead @ Westpac - Worked with Ruvindu",
-    text: "I have worked with Ruvindu for several months on Snyk project, during this time, he has quickly had a good grasp on the Compass Online Banking applications, demonstrating a strong ability to learn, adapt, and grow in a short period. His independent work style and solid knowledge in Maven, Java, JSP and JavaScript etc. has enabled him to address many security vulnerabilities successfully and efficiently.",
+    text: "I have worked with Ruvindu for several months on a Snyk adoption project, during this time, Ruvindu has quickly had a good grasp of Westpac / St. George Online Banking applications, demonstrating a strong ability to learn, adapt and grow in a short period. His independent work style and solid knowledge in Maven, Java, JSP, and JavaScript has enabled him to address several issues successfully and efficiently. Dedicated and focused, he consistently met deadlines, ensuring the applications remained secure and reliable for our customers.",
     avatar: memojiAvatar3,
   },
   {
